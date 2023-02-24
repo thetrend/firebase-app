@@ -1,5 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
+import { getAuth } from 'firebase/auth';
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
@@ -10,5 +12,10 @@ const firebaseConfig = {
   measurementId: import.meta.env.MEASUREMENT_ID
 }
 
-export default initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const analytics = getAnalytics(app);
+
+export { auth, analytics };
+
+export default app;
