@@ -1,7 +1,7 @@
-const PasswordForget = () => (
+const PasswordChange = () => (
   <div>
-    <h1>PasswordForget Page</h1>
+    <h1>PasswordChange Page</h1>
   </div>
 );
 
-export default PasswordForget;
+export default PasswordChange;
